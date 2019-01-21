@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="ENGINE.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ENGINE"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Loaded="Page_Loaded"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel Orientation="Vertical">
+            <TextBlock x:Name="fps"/>
+            <TextBlock x:Name="avgFps"/>
+            
+            <TextBlock Text="Camera Mode"/>
+            <Button x:Name="Static"  Content="Static" Click="Static_Click"/>
+            <Button x:Name="Targeting" Content="Targeting" Click="Targeting_Click"/>
+            <Button x:Name="Following" Content="Following" Click="Following_Click"/>
+            
+            <TextBlock Text="Shading Mode"/>
+            <Button x:Name="Flat" Content="Flat" Click="Flat_Click"/>
+            <Button x:Name="Goraud" Content="Goraud" Click="Goraud_Click"/>
+            <Button x:Name="PhongSh" Content="Phong" Click="PhongSh_Click"/>
+            
+            <TextBlock Text="Specular Mode"/>
+            <Button x:Name="BlinnPhong" Content="Blinn-Phong" Click="BlinnPhong_Click" />
+            <Button x:Name="PhongSp" Content="Phong" Click="PhongSp_Click"/>
+
+            <TextBlock Text="Extra"/>
+            <Button x:Name="Car" Content="Car ON/OFF" Click="Car_Click"/>
+            <Button x:Name="ZoomIn" Content="ZoomIn" Click="ZoomIn_Click"/>
+            <Button x:Name="ZoomOut" Content="ZoomOut" Click="ZoomOut_Click"/>
+
+        </StackPanel>
+        <Image x:Name="frontBuffer"/>
+    </Grid>
+</Page>
